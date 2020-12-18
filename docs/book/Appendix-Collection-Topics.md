@@ -1613,7 +1613,7 @@ Brasilia
 | **Iterator\<T\> iterator() Spliterator\<T\> spliterator()** | 返回一个迭代器来遍历集合中的元素。 **Spliterators** 更复杂一些，它用在并发场景 |
 | **boolean remove(Object)** | 如果目标集合包含该参数，则在集合中删除该参数，如果成功删除则返回 **true** 。（“可选的”） |
 | **boolean removeAll(Collection\<?\>)** | 删除目标集合中，参数集合所包含的全部元素。如果有元素被成功删除则返回 **true** 。 （“可选的”） |
-| **boolean removeIf(Predicate\<? super E\>)** | 删除此集合中，满足给定谓词（predicate）的所有元素 |
+| **boolean removeIf(Predicate\<? super E\>)** | 删除此集合中，满足给定断言（predicate）的所有元素 |
 | **Stream\<E\> stream() Stream\<E\> parallelStream()** | 返回由该 **Collection** 中元素所组成的一个 **Stream** |
 | **int size()** | 返回集合中所包含元素的个数 |
 | **Object[] toArrat()** | 返回包含该集合所有元素的一个数组 |
@@ -2324,7 +2324,7 @@ dancing
 | **LinkedHashMap** | 与 **HashMap** 类似，但是当遍历时，可以按插入顺序或最近最少使用（LRU）顺序获取键值对。只比 **HashMap** 略慢，一个例外是在迭代时，由于其使用链表维护内部顺序，所以会更快些。 |
 | **TreeMap** | 基于红黑树的实现。当查看键或键值对时，它们按排序顺序（由 **Comparable** 或 **Comparator** 确定）。 **TreeMap** 的侧重点是按排序顺序获得结果。 **TreeMap** 是唯一使用 `subMap()` 方法的 **Map** ，它返回红黑树的一部分。 |
 | **WeakHashMap** | 一种具有 *弱键*（weak keys） 的 **Map** ，为了解决某些类型的问题，它允许释放 **Map** 所引用的对象。如果在 **Map** 外没有对特定键的引用，则可以对该键进行垃圾回收。 |
-| **ConcurrentHashMap** | 不使用同步锁定的线程安全 **Mao** 。这在[第二十四章 并发编程]() 一章中讨论。 |
+| **ConcurrentHashMap** | 不使用同步锁定的线程安全 **Map** 。这在[第二十四章 并发编程]() 一章中讨论。 |
 | **IdentityHashMap** | 使用 `==` 而不是 `equals()` 来比较键。仅用于解决特殊问题，不适用于一般用途。 |
 
 散列是在 **Map** 中存储元素的最常用方法。
